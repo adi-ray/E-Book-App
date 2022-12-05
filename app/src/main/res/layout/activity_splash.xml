@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book App"
+        android:text="Bookify  :)"
         android:textSize="20sp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="@color/black"

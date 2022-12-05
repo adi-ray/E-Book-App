@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DashboardUserActivity">
 
     <!--Toolbar-->
@@ -12,14 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@drawable/shape_toolbar01">
-
-        <TextView
-            android:id="@+id/account"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="account"
-            android:textColor="@color/white" />
+            android:orientation="vertical"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="4dp"
+            >
+
+
+            <ImageButton
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="13.5dp"
+                android:src="@drawable/ic_baseline_person_outline_24"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/titleIv"
@@ -30,6 +45,7 @@
             android:text="Dashboard User"
             android:textStyle="bold"
             android:textColor="@color/white" />
+
 
         <TextView
             android:id="@+id/subTitletv"
@@ -54,4 +70,959 @@
     </RelativeLayout>
 
 
-</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="30"
+                        android:layout_height="180dp"
+                        android:src="@drawable/a_story_of_struggle"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="A story of struggle maker"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/a_story_of_struggle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="30"
+                        android:layout_height="180dp"
+                        android:src="@drawable/write_a_new_name_in_the_book_of_life"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="write a new name in the book of life"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/write_a_new_name_in_the_book_of_life"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="30"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_outsiders"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The outsiders"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_outsiders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="30"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_name_of_the_book"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The name of the book"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_name_of_the_book"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_graveyard_apartment"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The graveyard apartment"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_graveyard_apartment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_english_novel"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The english novel"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_english_novel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue"/>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_english_assassin"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The english assassin"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_english_assassin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_book_of_names"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The book of names"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_book_of_names"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/the_bamboo_stalk"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="The_bamboo_stalk"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/the_bamboo_stalk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/news_of_the_world"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="news of the world"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/news_of_the_world"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/modern_physics_for_science_and_engineering"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="Modern physics for science and engineering"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/mpfsae"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/harry_potter"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="Harry Potter"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/HarryPotter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/code_name_god"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="Code Name God"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/cng"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="25"
+                        android:layout_height="180dp"
+                        android:src="@drawable/agnipankh"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="4dp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="75"
+                        android:layout_margin="4dp"
+                        android:orientation="vertical"
+                        android:weightSum="100"
+                        android:padding="8dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="5dp"
+                            android:text="Agnipank"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_weight="70"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"
+                            app:cardCornerRadius="12dp"
+                            android:padding="0dp"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <Button
+                                android:id="@+id/agnipamk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="0dp"
+                                android:backgroundTint="#061D9F"
+                                android:text="Issue" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

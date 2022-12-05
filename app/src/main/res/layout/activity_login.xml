@@ -51,7 +51,8 @@
                 android:id="@+id/emailTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:expandedHintEnabled="false">
+                android:layout_margin="0dp"
+                app:hintEnabled="false">
                 
                 <EditText
                     android:id="@+id/emailEt"
@@ -60,7 +61,7 @@
                     android:background="@drawable/shape_edittext01"
                     android:drawableStart="@drawable/ic_email_gray"
                     android:drawablePadding="10dp"
-                    android:hint="Email"
+                    android:hint="email"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/black"

@@ -29,7 +29,9 @@ class SplashActivity : AppCompatActivity() {
         //get current user
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null) {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, MainActivity::class.java)
+            finish()
+            startActivity(intent)
         } else {
             //check user type
             val ref = FirebaseDatabase.getInstance().getReference("Users")
@@ -42,20 +44,23 @@ class SplashActivity : AppCompatActivity() {
                         val userType = snapshot.child("userType").value
                         if (userType == "user") {
                             //open user dashboard
+                            val intent = Intent(
+                                this@SplashActivity,
+                                DashboardUserActivity::class.java)
+                            finish()
                             startActivity(
-                                Intent(
-                                    this@SplashActivity,
-                                    DashboardUserActivity::class.java
-                                )
+                             intent
                             )
                             finish()
                         } else if (userType == "admin") {
                             //open admin dashboard
+                            val intent = Intent(
+                                this@SplashActivity,
+                                DashboardUserActivity::class.java
+                            )
+                            finish()
                             startActivity(
-                                Intent(
-                                    this@SplashActivity,
-                                    DashboardAdminActivity::class.java
-                                )
+                                intent
                             )
                             finish()
                         }
